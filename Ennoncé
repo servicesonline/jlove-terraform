@@ -1,0 +1,51 @@
+Worketyamo  11/07
+
+Exercices d’application
+
+
+Exercice 1 :  /2pts
+Création de l’image 
+Grâce à vos connaissances sur docker créer une image accessible de conteneur accessible  en ssh . configurez les paires de clés ssh et stockez la clé privée en local . 
+Registry 
+Créez un repository dans le docker-hub et faites et mettez y l’image créée plus haut .
+
+
+
+TERRAFORM  & KUBERNETES /8pts
+Configuration du backend et gestion du state 
+Configurez un backend sur votre cluster kubernetes
+Votre backend doit porter votre nom 
+Rédaction des scripts terraform et réutilisabilité 
+Creez les objets suivants en utilisant un script terraform en HCL 
+Créer trois pods grâce à l’image crée plus haut avec chacun : un nom différent , un nom de conteneur différent, les mêmes labels  
+Créez un service de type node port par lequel vous pourrez vous connecter en ssh directement dans les pods
+Connaissance de kubernetes 
+Creez les objets suivants en utilisant un script terraform en HCL : 
+Un déploiement avec les spécifications suivantes : 
+On doit pouvoir mettre à jour l’image des pods sans créer un downtime 
+le déploiement doit avoir 3 répliques de pods 
+ L’image reste la même 
+Tout les pods doivent être creer sur le master node 
+Créer un service à l’aide du déploiement que vous avez creer 
+Dites pourquoi on doit utiliser un déploiement au lieu de créer des pods de manière traditionnelle 
+
+
+
+ANSIBLE /8pts
+Créez un inventory avec deux group 
+Premier groupe : [le premier service que vous avez creer] 
+Deuxieme groupe : [ le deuxieme service que vous avez creer] 
+Créer des group vars pour ces deux groupes contenant les variables de connexion en ssh 
+Créer un playbook qui crée de nouveaux utilisateurs (3) avec les droits admins [sans password] 
+Configurez les clés publiques pour la connexion ssh de tout les users 
+Installez vim et les utilitaires réseaux de votre choix 
+Etablissez une connexion ssh avec tout les utilisateurs 
+
+
+
+
+BEST PRACTICES /2pts 
+
+NOTA BENE 
+Toutes les ressources doivent avoir des labels portant votre nom
+Tout les pods doivent etre creer sur le master node 
